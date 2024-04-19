@@ -16,12 +16,11 @@ struct Playmobil {
     func priceEuro() -> String {
         return "\(price)€"
     }
-    
     var image: UIImage? {
-    return UIImage(named: name)
+        return UIImage(named: name)
     }
-     
     var refString: String {
-    return "Ref: \(reference)"
+        return "Ref: \(reference)"
     }
+    
 }

@@ -18,4 +18,5 @@ class CategoryCell: UITableViewCell {
             catIV.image = category.toImage()
         }
     }
+    
 }

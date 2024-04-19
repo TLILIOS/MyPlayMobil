@@ -16,7 +16,17 @@ class HomeController: UIViewController {
         setUpTableView()
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "toDetails" else { return }
+        guard let controller = segue.destination as? PlayMobilController else { return }
+        controller.category = sender as? PlaymobilCategory
+    }
+    
+    @IBAction func cartPressed(_ sender: UIBarButtonItem) {
+        let selection = CartController()
+      present(selection, animated: true, completion: nil)
+    }
+    
 }
 
 extension HomeController: UITableViewDelegate, UITableViewDataSource {
@@ -34,6 +44,8 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = PlaymobilCategory.allCases[indexPath.row]
+        performSegue(withIdentifier: "toDetails", sender: category)
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

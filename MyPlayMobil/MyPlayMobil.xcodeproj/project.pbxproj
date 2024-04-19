@@ -18,6 +18,9 @@
 		57DB595A2BCEDBCA0098BFC0 /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB59592BCEDBCA0098BFC0 /* Datas.swift */; };
 		57DB595C2BCEE7400098BFC0 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB595B2BCEE73F0098BFC0 /* CategoryCell.swift */; };
 		57DB595E2BCEEF500098BFC0 /* PlayMobilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB595D2BCEEF500098BFC0 /* PlayMobilController.swift */; };
+		57DB59602BD00FEE0098BFC0 /* PlayMobilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB595F2BD00FEE0098BFC0 /* PlayMobilCell.swift */; };
+		57DB59622BD02C720098BFC0 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB59612BD02C720098BFC0 /* CartCell.swift */; };
+		57DB59662BD123950098BFC0 /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB59652BD123950098BFC0 /* CartController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		57DB59592BCEDBCA0098BFC0 /* Datas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
 		57DB595B2BCEE73F0098BFC0 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		57DB595D2BCEEF500098BFC0 /* PlayMobilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMobilController.swift; sourceTree = "<group>"; };
+		57DB595F2BD00FEE0098BFC0 /* PlayMobilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMobilCell.swift; sourceTree = "<group>"; };
+		57DB59612BD02C720098BFC0 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		57DB59652BD123950098BFC0 /* CartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,9 @@
 				57DB59592BCEDBCA0098BFC0 /* Datas.swift */,
 				57DB595B2BCEE73F0098BFC0 /* CategoryCell.swift */,
 				57DB595D2BCEEF500098BFC0 /* PlayMobilController.swift */,
+				57DB595F2BD00FEE0098BFC0 /* PlayMobilCell.swift */,
+				57DB59612BD02C720098BFC0 /* CartCell.swift */,
+				57DB59652BD123950098BFC0 /* CartController.swift */,
 			);
 			path = MyPlayMobil;
 			sourceTree = "<group>";
@@ -153,13 +162,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57DB59662BD123950098BFC0 /* CartController.swift in Sources */,
 				57DB59462BCED9170098BFC0 /* HomeController.swift in Sources */,
+				57DB59622BD02C720098BFC0 /* CartCell.swift in Sources */,
 				57DB595E2BCEEF500098BFC0 /* PlayMobilController.swift in Sources */,
 				57DB595A2BCEDBCA0098BFC0 /* Datas.swift in Sources */,
 				57DB59422BCED9170098BFC0 /* AppDelegate.swift in Sources */,
 				57DB595C2BCEE7400098BFC0 /* CategoryCell.swift in Sources */,
 				57DB59442BCED9170098BFC0 /* SceneDelegate.swift in Sources */,
 				57DB59562BCED9FE0098BFC0 /* PlayMobilCategories.swift in Sources */,
+				57DB59602BD00FEE0098BFC0 /* PlayMobilCell.swift in Sources */,
 				57DB59582BCEDAD90098BFC0 /* PlayMobil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

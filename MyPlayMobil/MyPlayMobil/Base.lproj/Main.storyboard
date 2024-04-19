@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="406" id="fjd-Ep-5OL" customClass="CategoryCell" customModule="MyPlayMobil" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="406" id="fjd-Ep-5OL" customClass="CategoryCell" customModule="MyPlayMobil" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="406"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fjd-Ep-5OL" id="lp7-m6-55f">
@@ -72,27 +72,30 @@
                     <navigationItem key="navigationItem" title="My Play Mobil" id="5A5-s3-2JC">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Ic7-u9-fxQ">
                             <imageReference key="image" image="cart" catalog="system" symbolScale="large" renderingMode="original" variableValue="1"/>
+                            <connections>
+                                <action selector="cartPressed:" destination="BYZ-38-t0r" id="B7d-0H-j9u"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="N8f-KD-2tg" id="3xj-YR-MtN"/>
-                        <segue destination="hLz-Mp-6Zk" kind="show" id="N62-f6-VdS"/>
+                        <segue destination="hLz-Mp-6Zk" kind="show" identifier="toDetails" id="N62-f6-VdS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="900" y="3.5211267605633805"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Play Mobil Controller-->
         <scene sceneID="8Sd-3M-zrU">
             <objects>
-                <tableViewController id="hLz-Mp-6Zk" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ehd-IV-aEL">
+                <tableViewController id="hLz-Mp-6Zk" customClass="PlayMobilController" customModule="MyPlayMobil" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ehd-IV-aEL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="Cqw-SD-aeA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlayMobilCell" rowHeight="200" id="Cqw-SD-aeA" customClass="PlayMobilCell" customModule="MyPlayMobil" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cqw-SD-aeA" id="2u6-9M-0wU">
@@ -117,34 +120,43 @@
                                                     <color key="textColor" name="AccentColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrU-iX-Wrc">
-                                                    <rect key="frame" x="278" y="104" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lb-1H-ZTK">
-                                                    <rect key="frame" x="273" y="9" width="54" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" name="AccentColor"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="cart.fill.badge.plus" catalog="system"/>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wd-M8-0qM">
-                                                    <rect key="frame" x="278" y="56" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="NxZ-3W-2yG">
+                                                    <rect key="frame" x="177.33333333333337" y="0.0" width="167.66666666666663" height="133"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lb-1H-ZTK">
+                                                            <rect key="frame" x="113.66666666666666" y="0.0" width="54" height="44.333333333333336"/>
+                                                            <color key="tintColor" name="AccentColor"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="cart.fill.badge.plus" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="addToSelection:" destination="Cqw-SD-aeA" eventType="touchUpInside" id="4HK-B3-3zX"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wd-M8-0qM">
+                                                            <rect key="frame" x="117.66666666666666" y="44.333333333333329" width="50" height="44.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrU-iX-Wrc">
+                                                            <rect key="frame" x="114.66666666666666" y="88.666666666666671" width="53" height="44.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="20"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                             <constraints>
+                                                <constraint firstItem="NxZ-3W-2yG" firstAttribute="top" secondItem="ryC-Df-pcW" secondAttribute="top" id="8bH-ct-Nex"/>
                                                 <constraint firstItem="TKc-In-bvm" firstAttribute="top" secondItem="Vp2-hN-udJ" secondAttribute="bottom" id="9BB-gW-9jh"/>
                                                 <constraint firstItem="Vp2-hN-udJ" firstAttribute="leading" secondItem="ryC-Df-pcW" secondAttribute="leading" id="Gwl-TF-ahX"/>
+                                                <constraint firstItem="NxZ-3W-2yG" firstAttribute="leading" secondItem="Vp2-hN-udJ" secondAttribute="trailing" id="KoW-tR-Zs4"/>
+                                                <constraint firstItem="TKc-In-bvm" firstAttribute="top" secondItem="NxZ-3W-2yG" secondAttribute="bottom" id="Lrw-m8-qJN"/>
                                                 <constraint firstItem="Vp2-hN-udJ" firstAttribute="top" secondItem="ryC-Df-pcW" secondAttribute="top" id="TcA-88-Yhn"/>
                                                 <constraint firstItem="TKc-In-bvm" firstAttribute="leading" secondItem="ryC-Df-pcW" secondAttribute="leading" id="ehK-6q-pBi"/>
+                                                <constraint firstAttribute="trailing" secondItem="NxZ-3W-2yG" secondAttribute="trailing" constant="8" id="tvf-15-gkC"/>
                                                 <constraint firstAttribute="bottom" secondItem="TKc-In-bvm" secondAttribute="bottom" id="tyV-O9-NOf"/>
                                                 <constraint firstAttribute="trailing" secondItem="TKc-In-bvm" secondAttribute="trailing" id="ytf-ev-ruq"/>
                                             </constraints>
@@ -157,6 +169,13 @@
                                         <constraint firstItem="ryC-Df-pcW" firstAttribute="leading" secondItem="2u6-9M-0wU" secondAttribute="leadingMargin" id="uEP-oa-dQq"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="playMIV" destination="Vp2-hN-udJ" id="tWB-2V-XE8"/>
+                                    <outlet property="playMobNameLBL" destination="TKc-In-bvm" id="qSa-au-U2Q"/>
+                                    <outlet property="priceLbl" destination="WrU-iX-Wrc" id="vQP-9y-RmA"/>
+                                    <outlet property="refLBL" destination="7wd-M8-0qM" id="qw2-uy-qdb"/>
+                                    <outlet property="viewContainer" destination="ryC-Df-pcW" id="O3w-MS-zR4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -210,6 +229,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
